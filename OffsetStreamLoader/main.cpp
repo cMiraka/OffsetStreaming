@@ -9,7 +9,8 @@ namespace Globals {
 }
 
 void LoopExample() {
-
+	Sleep(2000); // -> Some sleep so the thread grabs the offset first
+	
 	for (int i = 0; i < 10; i++)
 	{
 		auto ImportantUWorld = Utils::Read<uintptr_t>(Globals::ImageBase + Globals::StreamedVariables::GWorld);
