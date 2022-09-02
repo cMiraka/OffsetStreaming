@@ -26,7 +26,7 @@ void GetVarFromServer() {
 		std::string Offset = Utils::GetString("https://pastebin.com/raw/tevnrkiE");
 		Globals::StreamedVariables::GWorld = std::strtoul(Offset.c_str(), NULL, 16);
 		if (Globals::StreamedVariables::GWorld == 0) // -> Simple check to see if the variable has been killed from the server / link
-			exit(0); // -> Exits if the stream isnt valid or killed
+			exit(0); // -> Exits if the stream isnt valid or has been killed
 
 		std::this_thread::sleep_for(std::chrono::milliseconds(1));
 	}
