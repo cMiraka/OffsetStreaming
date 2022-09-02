@@ -4,7 +4,7 @@ namespace Globals {
 	uintptr_t ImageBase;
 
 	namespace StreamedVariables {
-		uintptr_t GWorld; // https://github.com/kenn-notation/OffsetStreaming/raw/master/ExampleOffset -> 0xDEADBEEF for example
+		uintptr_t GWorld; // https://pastebin.com/raw/tevnrkiE -> 0xDEADBEEF for example
 	}
 }
 
@@ -22,7 +22,7 @@ void LoopExample() {
 void GetVarFromServer() {
 	while (true)
 	{
-		std::string Offset = Utils::GetString("https://github.com/kenn-notation/OffsetStreaming/raw/master/ExampleOffset");
+		std::string Offset = Utils::GetString("https://pastebin.com/raw/tevnrkiE");
 		Globals::StreamedVariables::GWorld = std::strtoul(Offset.c_str(), NULL, 16);
 		if (Globals::StreamedVariables::GWorld == 0) // -> Simple check to see if the variable has been killed from the server / link
 			exit(0); // -> Exits if the stream isnt valid or killed
