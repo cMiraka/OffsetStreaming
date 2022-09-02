@@ -9,7 +9,7 @@ namespace Globals {
 }
 
 void LoopExample() {
-	Sleep(2000); // -> Some sleep so the thread grabs the offset first
+	Sleep(1000); // -> Some sleep so the thread grabs the offset first
 	
 	for (int i = 0; i < 10; i++)
 	{
